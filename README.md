@@ -50,7 +50,7 @@ console.log("Row Number",range_modified.getRow())
   
   
   
-  **The change must occur in the "Inbound sheet noly"**
+  **The change must occur in the "Inbound sheet only"**
   
   
   if(range_modified.getSheet().getName()!== "Inbound")return
