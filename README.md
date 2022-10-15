@@ -66,7 +66,7 @@ console.log("Row Number",range_modified.getRow())
   **Offset() is used to move from the current cell in steps define in the function**
   
   
-  **offset(0,1) means move 0 step in row axis and 1 step in column axis*
+  **offset(0,1) means move 0 step in row axis and 1 step in column axis**
   
   
   range_modified.offset(0,1).setValue(new Date())
