@@ -1,0 +1,26 @@
+/**
+* onEdit - Inbuilt function that runs when a user changes a value in a spreadsheet.
+*Addtimestamp - Is the function used to automaticall add timestamps and remove based on the a cell changed
+*
+*
+*/
+function onEdit(e) 
+{
+Addtimestamp(e);
+}
+function Addtimestamp(e)
+{
+  const range_modified=e.range
+ //console.log("Value=",SpreadsheetApp.getActiveRange().getValue())
+  console.log("A1 notation",range_modified.getA1Notation())
+  console.log("Sheet Name",range_modified.getSheet().getName())
+  console.log("Column NUmber",range_modified.getColumn())
+  console.log("Row Number",range_modified.getRow())
+  if(range_modified.getValue() == ""){
+    range_modified.offset(0,1).setValue("")
+    return}
+  if(range_modified.getColumn() !== 3)return
+  if(range_modified.getSheet().getName()!== "Inbound")return
+  if(range_modified.getRow() < 2) return
+  range_modified.offset(0,1).setValue(new Date())
+}
