@@ -1,0 +1,4 @@
+#This formula helpt to do vlookup backwords.
+#Make sure the values under range have no Spaces in between
+
+=VLOOKUP( G3, ARRAYFORMULA(SPLIT(QUERY(B:B&" "&A:A)," ")),2,0)
