@@ -1,0 +1,4 @@
+How To get the latest value by searching acrross excel data
+
+=XLOOKUP(E2,B:B,C:C,,,-1)
+=XLOOKUP(Search Value,Range of search values,Range of return Value,,,-1)
